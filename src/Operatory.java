@@ -31,6 +31,5 @@ public class Operatory {
         System.out.println(numOne < numTwo && numOne == 1); //prawda && prawda --> prawda
         System.out.println(numOne > numTwo && numOne == 1); //falsz && prawda --> falsz
         System.out.println(numOne > numTwo && numOne != 1); //falsz && falsz --> falsz
-
     }
 }
