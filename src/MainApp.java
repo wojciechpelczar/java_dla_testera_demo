@@ -6,8 +6,8 @@ public class MainApp {
 
         //TYP nazwa = new obiekt()
         User wojtek = new User();
-        wojtek.firstname = "Wojtek";
-        wojtek.lastname = "Testowy";
+        wojtek.firstName = "Wojtek";
+        wojtek.lastName = "Testowy";
         wojtek.email = "wojtek@test.pl";
         wojtek.age = 17;
         wojtek.isAdult = false;
@@ -26,21 +26,23 @@ public class MainApp {
         //metody z parametrami
         wojtek.greetings("Joanna");
         wojtek.greetings("Ignacy");
-        wojtek.howOldAreYou("Maurycy",17);
+        //przeciążanie metody greetings
+        wojtek.greetings("Zygmunt", "Małolepszy");
+        wojtek.howOldAreYou("Maurycy", 17);
         wojtek.howOldAreYou("Izabela", 12);
         int wojtekAgePlus10 = wojtek.yourAgePlus10(13);
         System.out.println(wojtekAgePlus10);
 
         //TYP nazwa = new obiekt()
         User tomek = new User();
-        tomek.firstname = "Tomasz";
-        tomek.lastname = "Booksy";
+        tomek.firstName = "Tomasz";
+        tomek.lastName = "Booksy";
         tomek.email = "booksy@test.pl";
         tomek.age = 31;
         tomek.isAdult = true;
 
         //metody bez parametrów
-        //typu: void(
+        //typu: void
         tomek.getFullName();
         tomek.getAllInfo();
 

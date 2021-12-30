@@ -3,8 +3,8 @@ public class User {
     //1. POLA OBIEKTU
     //opisują z czego będzie składał się nowy obiekt
 
-    String firstname;  //default: NULL
-    String lastname;
+    String firstName;  //default: NULL
+    String lastName;
     String email;
     int age;          //default: 0
     boolean isAdult;   //default: false
@@ -15,11 +15,11 @@ public class User {
 
     //zwracany typ + nazwa metody (+argument/parametr)
     void getFullName() {
-        System.out.println(firstname + " " + lastname);
+        System.out.println(firstName + " " + lastName);
     }
 
     void getAllInfo() {
-        System.out.println(firstname + " " + lastname + " " + email + " " + age + " " + isAdult);
+        System.out.println(firstName + " " + lastName + " " + email + " " + age + " " + isAdult);
     }
 
     int getUserAge() {
@@ -36,6 +36,11 @@ public class User {
 
     void greetings(String name) {
         System.out.println("Hi " + name + ". Nice to see you");
+    }
+
+    //przeciążanie metody (zamiast tworzyć nowe metodu greetingsFullName) - muszą się różnić ilością parametrów, lub typem
+    void greetings(String firstName, String lastName ){
+        System.out.println("Hi " + firstName + " " + lastName + ". Nice to see you.");
     }
 
     void howOldAreYou(String name, int userAge) {
