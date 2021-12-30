@@ -22,16 +22,28 @@ public class User {
         System.out.println(firstname + " " + lastname + " " + email + " " + age + " " + isAdult);
     }
 
-    int getUserAge(){
+    int getUserAge() {
         return age;
     }
 
-    boolean isUserAdult(){
-        if(age>=18){
+    boolean isUserAdult() {
+        if (age >= 18) {
             return true;
-        }else {
+        } else {
             return false;
         }
+    }
+
+    void greetings(String name) {
+        System.out.println("Hi " + name + ". Nice to see you");
+    }
+
+    void howOldAreYou(String name, int userAge) {
+        System.out.println("Hi " + name + ". You are " + userAge + " years old");
+    }
+
+    int yourAgePlus10(int userAge){
+        return userAge+10;
     }
 
 }
