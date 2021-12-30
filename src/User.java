@@ -10,6 +10,26 @@ public class User {
     boolean isAdult;   //default: false
     //https://cs-fundamentals.com/java-programming/java-primitive-data-types
 
+    //3. KONSTRUKTOR - służy do tworzenia instancji obiektu
+    //- nazwa konstruktora jest taka sama jak nazwa klasy
+    //- konstruktor piszemy wielką lierą
+    //- konstruktor nie ma zwracanego typu
+
+//      domyślny konstruktor - tworzy pusty obiekt !!!
+//    User() {
+//
+//    }
+
+    //w Java jest konwencja, że nazwy parametrów są takie same jak nazwy pól obiektów
+    //słówko this. jest to wskaźnik na dany obiekt
+    User(String firstName, String lastName, String email, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.isAdult = isUserAdult();
+    }
+
     //2. METODY
     //opisują co dany obiekt będzie mógł robić
 
@@ -38,8 +58,8 @@ public class User {
         System.out.println("Hi " + name + ". Nice to see you");
     }
 
-    //przeciążanie metody (zamiast tworzyć nowe metodu greetingsFullName) - muszą się różnić ilością parametrów, lub typem
-    void greetings(String firstName, String lastName ){
+    //przeciążanie metody (zamiast tworzyć nowe metody greetingsFullName) - muszą się różnić ilością parametrów, lub typem
+    void greetings(String firstName, String lastName) {
         System.out.println("Hi " + firstName + " " + lastName + ". Nice to see you.");
     }
 
@@ -47,8 +67,8 @@ public class User {
         System.out.println("Hi " + name + ". You are " + userAge + " years old");
     }
 
-    int yourAgePlus10(int userAge){
-        return userAge+10;
+    int yourAgePlus10(int userAge) {
+        return userAge + 10;
     }
 
 }
