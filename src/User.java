@@ -34,17 +34,17 @@ public class User {
     //opisują co dany obiekt będzie mógł robić
 
     //zwracany typ + nazwa metody (+argument/parametr)
-    void getFullName() {
-        System.out.println(firstName + " " + lastName);
-    }
+//    void getFullName() {
+//        System.out.println(firstName + " " + lastName);
+//    }
 
     void getAllInfo() {
         System.out.println(firstName + " " + lastName + " " + email + " " + age + " " + isAdult);
     }
 
-    int getUserAge() {
-        return age;
-    }
+//    int getUserAge() {
+//        return age;
+//    }
 
     boolean isUserAdult() {
         if (age >= 18) {
@@ -54,21 +54,21 @@ public class User {
         }
     }
 
-    void greetings(String name) {
-        System.out.println("Hi " + name + ". Nice to see you");
-    }
-
-    //przeciążanie metody (zamiast tworzyć nowe metody greetingsFullName) - muszą się różnić ilością parametrów, lub typem
-    void greetings(String firstName, String lastName) {
-        System.out.println("Hi " + firstName + " " + lastName + ". Nice to see you.");
-    }
-
-    void howOldAreYou(String name, int userAge) {
-        System.out.println("Hi " + name + ". You are " + userAge + " years old");
-    }
-
-    int yourAgePlus10(int userAge) {
-        return userAge + 10;
-    }
+//    void greetings(String name) {
+//        System.out.println("Hi " + name + ". Nice to see you");
+//    }
+//
+//    //przeciążanie metody (zamiast tworzyć nowe metody greetingsFullName) - muszą się różnić ilością parametrów, lub typem
+//    void greetings(String firstName, String lastName) {
+//        System.out.println("Hi " + firstName + " " + lastName + ". Nice to see you.");
+//    }
+//
+//    void howOldAreYou(String name, int userAge) {
+//        System.out.println("Hi " + name + ". You are " + userAge + " years old");
+//    }
+//
+//    int yourAgePlus10(int userAge) {
+//        return userAge + 10;
+//    }
 
 }
