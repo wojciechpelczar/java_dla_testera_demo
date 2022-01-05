@@ -1,5 +1,3 @@
-import java.nio.channels.ClosedByInterruptException;
-
 public class ZadanieDrugie {
     public static void main(String[] args) {
 
@@ -14,9 +12,11 @@ public class ZadanieDrugie {
         bug4.showAllInfo();
 
         bug1.showCreator();
+        bug1.showCreator();
         bug1.showBugStatus();
         int bug1Priority = bug1.getPriority();
         System.out.println(bug1Priority);
+        System.out.println(bug1.status);
         bug1.status = true;
         System.out.println(bug1.status);
         System.out.println(bug2.status);
