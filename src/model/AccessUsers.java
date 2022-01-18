@@ -2,6 +2,9 @@ package model;
 
 public class AccessUsers {
 
+    //pole statyczne - należą do klasy, a nie do obiektu
+    private static int userCounter = 0;
+
     //ENKAPSULACJA - ukrywanie danych albo ukrywanie implementacji
     //utworzyliśmy prywatne pola obiektów i do tych pól obiektów wystawiliśmy publiczne metody (*publiczne gettery i settery)
     // - ukryliśmy dane (dostęp do danych), ale udostępniliśmy gettery i settery (dodaliśmy walidację podczas wystawiania pól)
@@ -15,14 +18,22 @@ public class AccessUsers {
     private boolean isAdult;
 
     //konstruktor - pobiera jakieś parametry, a później ustawia pola obiektów wartościami parametrów
+    //służy do budowania albo konstruowania obiektów
     public AccessUsers(String firstName, String lastName, String email, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.age = age;
         this.isAdult = isUserAdult();
+        userCounter++;
     }
 
+    //statyczna metoda
+    public static int getUserCounter() {
+        return userCounter;
+    }
+
+    //gettery i settery
     public String getEmail() {      //gettery są tego samego typu co pole obiektu
         return email;
     }
@@ -67,7 +78,7 @@ public class AccessUsers {
         isAdult = adult;
     }
 
-    //METODY
+    //METODY - pokazują co dany obiekt może zrobić
     public void getAllInfo() {
         System.out.println(firstName + " " + lastName + " " + email + " " + age + " " + isAdult);
     }
