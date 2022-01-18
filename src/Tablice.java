@@ -16,18 +16,18 @@ public class Tablice {
         // wartości tablicy ["Bartek", "Asia", "Monika", "Grzegorz", "Roman"]
         // index tablicy    [    0   ,    1  ,    2    ,      3    ,    4   ]
 
-        //names[0] = "Bartek";       // domyślną wartością dla typu String jest null
+        names[0] = "";       // domyślną wartością dla typu String jest null
         names[0] = "Bartek";
         names[1] = "Asia";
         names[2] = "Monika";
         names[3] = "Grzegorz";
         names[4] = "Roman";
 
-        //różnica: musimy znać index tablicy (możemy przeskakiwać pomiędzy tablicami lub przejdzie przez wszystkie elementy tablicy)
+        //różnica: musimy znać index tablicy (możemy przeskakiwać pomiędzy elementami lub przejść przez wszystkie elementy tablicy)
         //for (licznik; warunek; zmiana licznika);
         for (int i = 0; i < names.length; i++) {
             if (i % 2 == 0) {                          //reszta z dzielenia = 0 (modulo) --> wyświetlimy tylko elementy z {parzystych} indeksów
-                System.out.println(names[i].toLowerCase());   //zamieniamy na małe litery
+                System.out.println(names[i].toLowerCase());   //a dodatkowo zamieniamy na małe litery
             }
         }
 
@@ -44,7 +44,7 @@ public class Tablice {
         System.out.println(names[2]);
         System.out.println(names[3]);
         System.out.println(names[4]);
-        //System.out.println(names[5]);   //ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+        //System.out.println(names[5]);   //gdy podajemy index, który nie istnieje --> ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
 
         //zwiększanie o 1 na różne sposoby
         int number = 10;
