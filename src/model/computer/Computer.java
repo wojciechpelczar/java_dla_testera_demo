@@ -2,12 +2,18 @@ package model.computer;
 
 public class Computer {
 
+    //MODYFIKATORY DOSTĘPU - access modifier
+    // DOMYŚLNY  - działa TYLKO w obrębie jednego pakietu - nie podajemy go
+    // PUBLICZNY - daje dostęp (do konstruktora, pól i metod) w CAŁYM projekcie
+    // PRIVATE   - dostęp do pola/metody TYLKO w obrębie danej klasy
+    // PROTECTED - będzie omówiony przy dziedziczeniu
+
     //opisujemy jak będzie wyglądać nasz PC i z czego będzie się składać
-    private String name;
-    private String type;
-    private int disc;
-    private int ram;
-    private boolean state;
+    protected String name;
+    protected String type;
+    protected int disc;
+    protected int ram;
+    protected boolean state;
 
     public Computer(String name, String type, int disc, int ram) {
         this.name = name;
@@ -50,6 +56,7 @@ public class Computer {
     }
 
     public void switchOn() {
+        System.out.println("SUPER - ustawiam pole state na true");
         state = true;
     }
 
