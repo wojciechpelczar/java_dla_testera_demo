@@ -20,6 +20,12 @@ public class Laptop extends Computer {         //dziedziczenie EXTENDS (IS A)
         }
     }
 
+    @Override
+    public void switchOff() {
+        System.out.println("Wyłączam Laptop: " + name);
+        state = false;
+    }
+
     public void setBatteryLevel(int newBatteryLevel) {
         batteryLevel = newBatteryLevel;
     }

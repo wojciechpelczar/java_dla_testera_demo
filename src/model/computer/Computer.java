@@ -61,6 +61,7 @@ public class Computer {
     }
 
     public void switchOff() {
+        System.out.println("Wyłączam komputer: " + name);
         state = false;
     }
 

@@ -24,6 +24,12 @@ public class PC extends Computer {    //dziedziczenie EXTENDS (IS A)
         }
     }
 
+    @Override
+    public void switchOff() {
+        System.out.println("Wyłączam PC: " + name);
+        state = false;
+    }
+
     public void setPowerSupply(boolean powerSupply) {
         this.powerSupply = powerSupply;
     }
