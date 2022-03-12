@@ -20,15 +20,17 @@ public class MainAppPolimorfizm {
         Computer macbookLaptop = new Laptop("mac book", "PRO", 1024, 64, 80);
 
         //w tablicy można zapisać tylko jeden typ
+        // przechowujemy w tablicy referencje do obiektów (nie przechowujemy samych obiektów)
         Computer[] computers = {officeComputer1, officeComputer2, officeComputer3, gamingLaptop, macbookLaptop};
 
-        //for each - zmienna computer typu Computer
+        //for each - zmienna computer typu Computer (klasy matki)
+        //gdy dodamy metodę switchOff() do klasy dziecko (nadpiszemy metodę z klasy matki) --> gdy wywołujemy metodę, to najpierw sprawdzamy klasę dziecko, jeżeli tam nie istnieje, to idziemy do klasy matki
         for (Computer computer: computers) {
             computer.switchOff();
         }
 
         //RZUTOWANIE typów -> rzutowanie na inny typ / zmiana typu --> gdy w klasie 'dziecko' istnieje metoda, które nie istnieje w klasie 'matce'
-        officeComputer1.showComputerName();
+        officeComputer1.showComputerName();`
         ((PC)officeComputer2).showComputerName();
 
     }
