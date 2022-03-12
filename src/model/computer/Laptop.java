@@ -29,4 +29,37 @@ public class Laptop extends Computer {         //dziedziczenie EXTENDS (IS A)
     public void setBatteryLevel(int newBatteryLevel) {
         batteryLevel = newBatteryLevel;
     }
+
+    @Override
+    public int volumeUp() {
+        return volumeLevel += 5;
+    }
+
+    @Override
+    public int volumeDown() {
+        volumeLevel -= 2;
+        if (volumeLevel <= 0) {
+            return 0;
+        } else {
+            return volumeLevel;
+        }
+    }
+
+    @Override
+    public int volumeUp(int newVolumeLevel) {
+        volumeLevel += newVolumeLevel;
+        if (volumeLevel >= 100) {
+            volumeLevel = 100;
+        }
+        return volumeLevel;
+    }
+
+    @Override
+    public int volumeDown(int newVolumeLevel) {
+        volumeLevel -= newVolumeLevel;
+        if (volumeLevel <= 0) {
+            volumeLevel = 0;
+        }
+        return volumeLevel;
+    }
 }

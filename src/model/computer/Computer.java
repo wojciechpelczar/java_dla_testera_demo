@@ -1,6 +1,8 @@
 package model.computer;
 
-public class Computer {
+//klasa abstrakcyjna - jakoś opisuje komputer, natomiast nie będzie to żaden konkretny komputer
+//będzie słyżyła po to by inne klasy mogły dziedziczyć z tej klasy (pola, metody) - sama klasa nie będzie służyła do tworzenia obiektów
+abstract public class Computer {
 
     //MODYFIKATORY DOSTĘPU - access modifier
     // DOMYŚLNY  - działa TYLKO w obrębie jednego pakietu - nie podajemy go
@@ -14,13 +16,23 @@ public class Computer {
     protected int disc;
     protected int ram;
     protected boolean state;
+    protected int volumeLevel;
 
     public Computer(String name, String type, int disc, int ram) {
         this.name = name;
         this.type = type;
         this.disc = disc;
         this.ram = ram;
-        this.state = false;     //ustawiamy domyślnie (ręcznie) na fałsz i nie pobieramy w konstruktorze !
+        state = false;     //ustawiamy domyślnie (ręcznie) na fałsz i nie pobieramy w konstruktorze !
+        volumeLevel = 50;
+    }
+
+    public int getVolumeLevel() {
+        return volumeLevel;
+    }
+
+    public void setVolumeLevel(int volumeLevel) {
+        this.volumeLevel = volumeLevel;
     }
 
     public String getName() {
@@ -68,5 +80,14 @@ public class Computer {
     public boolean getState() {
         return state;
     }
+
+    //metod abstrakcyjne nie posiadają swojego ciała, podajemy tylko nazwę i zwracany typ (czyli sygnaturę)
+    //po dodaniu metody abstrakcyjnej, to WSZYSTKIE klasy, które będą dziedziczyły po tej klasie abstrakcyjnej, muszą tę metodę zaimplementować (czyli dodać w swojej klasie)
+    public abstract int volumeUp();
+
+    public abstract int volumeDown();
+
+    public abstract int volumeUp(int newVolumeLevel);
+    public abstract int volumeDown(int newVolumeLevel);
 
 }
