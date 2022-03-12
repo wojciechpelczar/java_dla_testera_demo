@@ -30,7 +30,7 @@ public class MainAppPolimorfizm {
         }
 
         //RZUTOWANIE typów -> rzutowanie na inny typ / zmiana typu --> gdy w klasie 'dziecko' istnieje metoda, które nie istnieje w klasie 'matce'
-        officeComputer1.showComputerName();`
+        officeComputer1.showComputerName();
         ((PC)officeComputer2).showComputerName();
 
     }
