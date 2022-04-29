@@ -11,6 +11,7 @@ abstract public class Computer {
     // PROTECTED - będzie omówiony przy dziedziczeniu
 
     //opisujemy jak będzie wyglądać nasz PC i z czego będzie się składać
+    //są to pola obiektu i klasy które dzieciczą, będą dziedziczyły również też te pola obiektu
     protected String name;
     protected String type;
     protected int disc;
@@ -82,9 +83,8 @@ abstract public class Computer {
     }
 
     //metod abstrakcyjne nie posiadają swojego ciała, podajemy tylko nazwę i zwracany typ (czyli sygnaturę)
-    //po dodaniu metody abstrakcyjnej, to WSZYSTKIE klasy, które będą dziedziczyły po tej klasie abstrakcyjnej, muszą tę metodę zaimplementować (czyli dodać w swojej klasie)
+    //po dodaniu metody abstrakcyjnej, to WSZYSTKIE klasy, które będą dziedziczyły po tej klasie abstrakcyjnej, muszą tę metodę zaimplementować (czyli dodać/nadpisać w swojej klasie)
     public abstract int volumeUp();
-
     public abstract int volumeDown();
 
     public abstract int volumeUp(int newVolumeLevel);
